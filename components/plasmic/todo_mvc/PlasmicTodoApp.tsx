@@ -125,7 +125,7 @@ function PlasmicTodoApp__RenderFunc(props: {
               }
             )}
           >
-            {"todos"}
+            {"Todos"}
           </div>
 
           <div
@@ -183,6 +183,19 @@ function PlasmicTodoApp__RenderFunc(props: {
                   })}
                 >
                   <Task
+                    className={classNames("__wab_instance", sty.task__kX9M0, {
+                      [sty.task__global_theme_dark__kX9M0E1OtI]: hasVariant(
+                        globalVariants,
+                        "theme",
+                        "dark"
+                      )
+                    })}
+                    state={"editing" as const}
+                  >
+                    {"Some kind of text here"}
+                  </Task>
+
+                  <Task
                     className={classNames("__wab_instance", sty.task__hewN, {
                       [sty.task__global_theme_dark__hewNE1OtI]: hasVariant(
                         globalVariants,
@@ -195,19 +208,6 @@ function PlasmicTodoApp__RenderFunc(props: {
                         "empty"
                       )
                     })}
-                  >
-                    {"Some kind of text here"}
-                  </Task>
-
-                  <Task
-                    className={classNames("__wab_instance", sty.task__kX9M0, {
-                      [sty.task__global_theme_dark__kX9M0E1OtI]: hasVariant(
-                        globalVariants,
-                        "theme",
-                        "dark"
-                      )
-                    })}
-                    state={"editing" as const}
                   >
                     {"Some kind of text here"}
                   </Task>
