@@ -77,6 +77,11 @@ function PlasmicTask__RenderFunc(props: {
 }) {
   const { variants, args, overrides, forNode } = props;
 
+  const [isRootActive, triggerRootActiveProps] = useTrigger("usePressed", {});
+  const triggers = {
+    active_root: isRootActive
+  };
+
   const globalVariants = ensureGlobalVariants({
     theme: React.useContext(ThemeContext)
   });
@@ -99,6 +104,7 @@ function PlasmicTask__RenderFunc(props: {
           hasVariant(variants, "state", "editing") &&
           hasVariant(globalVariants, "theme", "dark")
       })}
+      data-plasmic-trigger-props={[triggerRootActiveProps]}
     >
       <div
         className={classNames(defaultcss.all, sty.box__ondqo, {
@@ -112,7 +118,13 @@ function PlasmicTask__RenderFunc(props: {
             hasVariant(globalVariants, "theme", "dark")
         })}
       >
-        {(hasVariant(variants, "state", "editing") ? false : true) ? (
+        {(
+          triggers.active_root
+            ? true
+            : hasVariant(variants, "state", "editing")
+            ? false
+            : true
+        ) ? (
           <div
             className={classNames(defaultcss.all, sty.box__sIvYk, {
               [sty.box__state_checked__sIvYkHzDra]: hasVariant(
@@ -234,8 +246,9 @@ function PlasmicTask__RenderFunc(props: {
                 hasVariant(variants, "state", "editing") &&
                 hasVariant(globalVariants, "theme", "dark")
             })}
-            placeholder={"Some placeholder text" as const}
+            placeholder={"Enter todo" as const}
             type={"text" as const}
+            value={"" as const}
           />
         ) : null}
         {(hasVariant(variants, "state", "editing") ? false : true) ? (

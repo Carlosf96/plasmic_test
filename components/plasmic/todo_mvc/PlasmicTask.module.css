@@ -36,19 +36,38 @@
 .box__state_checked_global_theme_dark__sIvYkHzDraE1OtI {
   border-color: rgb(79, 79, 79) /* plasmic-token: cpnRcokmP0xRw */;
 }
+.root .box__sIvYk:active {
+  background: #00d81f;
+}
 .img {
   display: flex;
   width: 16px;
   height: 16px;
   position: absolute;
-  left: 11.5px;
-  top: 12px;
+  left: 1px;
+  top: 3px;
 }
 .img__state_checked {
-  left: 3px;
-  top: 4px;
+  left: 1px;
+  top: 3px;
   width: 23px;
   height: 23px;
+}
+.img__state_checked_global_theme_dark {
+  left: 1px;
+  top: 3px;
+}
+.img__state_editing {
+  left: 1px;
+  top: 3px;
+}
+.root:hover .img {
+  left: 1px;
+  top: 3px;
+}
+.root:active .img {
+  left: 1px;
+  top: 3px;
 }
 .box__pLiH {
   display: flex;

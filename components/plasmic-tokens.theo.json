@@ -51,6 +51,16 @@
       }
     },
     {
+      "name": "green",
+      "type": "color",
+      "value": "#00D81F",
+      "category": "color",
+      "meta": {
+        "projectId": "qZkA3qWw23164No1KhMX9w",
+        "id": "2ynqjHDBR"
+      }
+    },
+    {
       "name": "header",
       "type": "color",
       "value": "rgba(175,47,47,0.15)",
